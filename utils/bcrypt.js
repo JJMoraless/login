@@ -5,7 +5,7 @@ export const encrypt = async (pass) => {
   return passHash;
 };
 
-export const verify = async (pass, passHash) => {
+export const comparePass = async (pass, passHash) => {
   const isOk = await bcrypt.compare(pass, passHash);
   return isOk;
 };

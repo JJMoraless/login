@@ -1,16 +1,22 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../config/sql/conectionDb.js";
 
-export const Task = sequelize.define("statusReservation", {
-  idStatusReservation: {
+
+export const Service = sequelize.define("service", {
+  idService: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
   },
-  name: {
+  nameService: {
     type: DataTypes.STRING,
     unique: true,
   },
+  descriptionService: {
+    type: DataTypes.STRING,
+  },
+  precioService: {
+    type: DataTypes.DECIMAL,
+  }
 });
-
 
